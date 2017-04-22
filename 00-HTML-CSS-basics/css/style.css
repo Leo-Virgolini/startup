@@ -6,65 +6,32 @@ html {
 }
 
 body {
+	background-color: lightgrey;
     margin-left : auto;
     margin-right : auto;
     padding : 10px;
     padding-top : 0px;
-    background-color: lightgrey;
 }
 
 .header {
 	background-image: url("../img/header.jpg");
 	font-size: 46px;
-	background-color: magenta;
 	text-align: center;
 	display: block;
 	clear: both;
 	margin-bottom: 10px;
+	border-radius: 10px;
 }
 
 .navigation {
 	background-image: url("../img/navigation.jpg");
 	font-size: 12px;
-	background-color: blue;
 	display: inline-block;
 	float: left;
 	width: 15%;
 	margin-bottom: 10px;
 	height: 600px;
-}
-
-.content {
-	font-size: 14px;
-	display: inline-block;
-	float: center;
-	width: 65%;
-	margin: 10px;
-	height: 600px;
-}
-
-.sidebar {
-	background-image: url("../img/sidebar.jpg");
-	font-size: 10px;
-	background-color: magenta;
-	display: inline-block;
-	float: right;
-	width: 15%;
-	margin-bottom: 10px;
-	height: 600px;
-}
-
-.footer  {
-	background: url("../img/footer.jpg") bottom magenta;
-	font-size: 10px;
-	text-align: center;
-	display: block;
-	clear: both;
-	height: 20px;
-}
-
-.oh-no-inline-styles {
-	background-color: green !important;
+	border-radius: 10px;
 }
 
 .navigation ul, .sidebar ul {
@@ -76,4 +43,70 @@ body {
 .navigation li, .sidebar li {
 	padding: 8px;
     margin-bottom: 8px;
+}
+
+.content {
+	background-color: grey;
+	font-size: 14px;
+	display: inline-block;
+	float: center;
+	width: 68%;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 600px;
+	border-radius: 10px;
+}
+
+.content-header {
+	border-radius: 10px;
+	margin: 10px;
+	height: 20%;
+	padding: 10px;
+}
+
+.content-article {
+	border-radius: 10px;
+	margin: 10px;
+	height: 60%;
+	padding: 10px;
+}
+
+.content-footer {
+	border-radius: 10px;
+	margin: 10px;
+	height: 3%;
+	padding: 10px;
+}
+
+.sidebar {
+	background-image: url("../img/sidebar.jpg");
+	font-size: 10px;
+	display: inline-block;
+	float: right;
+	width: 15%;
+	margin-bottom: 10px;
+	height: 600px;
+	border-radius: 10px;
+}
+
+.footer  {
+	background: url("../img/footer.jpg") bottom;
+	font-size: 10px;
+	text-align: center;
+	display: block;
+	clear: both;
+	height: 50px;
+	border-radius: 10px;
+}
+
+[class$='r'] {
+	background-color: magenta;
+}
+
+[class*='a']:not([class$='r']) {
+	background-color: blue;
+}
+
+.oh-no-inline-styles {
+	background-color: green !important;
 }
