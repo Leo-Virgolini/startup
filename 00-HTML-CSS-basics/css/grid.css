@@ -78,6 +78,5 @@ html { font-size: 100%; }
 .image {
   width: 300px;
   height: 180px;
-  opacity: 1;
   backface-visibility: hidden;
 }
