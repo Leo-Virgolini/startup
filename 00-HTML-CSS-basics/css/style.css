@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background-color: lightgrey;
+	background-color: lightgrey;
     margin-left : auto;
     margin-right : auto;
     padding : 10px;
@@ -17,10 +17,11 @@ body {
 	background-image: url("../img/header.jpg");
 	font-size: 46px;
 	text-align: center;
-	display: block;
 	clear: both;
 	margin-bottom: 10px;
 	border-radius: 10px;
+	height: 80px;
+	line-height: 150%;
 }
 
 .navigation {
@@ -35,14 +36,14 @@ body {
 }
 
 .navigation ul, .sidebar ul {
-    list-style-type: none;
+	list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 .navigation li, .sidebar li {
-    	padding: 8px;
-    	margin-bottom: 8px;
+	padding: 8px;
+    margin-bottom: 8px;
 }
 
 .content {
@@ -50,7 +51,7 @@ body {
 	font-size: 14px;
 	display: inline-block;
 	float: center;
-	width: 68%;
+	width: 68.6%;
 	margin-left: 10px;
 	margin-right: 10px;
 	height: 600px;
@@ -93,7 +94,6 @@ body {
 	background: url("../img/footer.jpg") bottom;
 	font-size: 10px;
 	text-align: center;
-	display: block;
 	clear: both;
 	height: 50px;
 	border-radius: 10px;
