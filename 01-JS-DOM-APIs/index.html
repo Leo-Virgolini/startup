@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>JS-DOM-APIs</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header class="header">
+          <h1>JS-DOM-APIs</h1>
+        </header>
+
+        <section class="content">
+          <header class="content-header">
+            Content Header
+          </header>
+
+          <article class="content-article">  
+            <p>
+              Hello World
+            </p>
+            <p id="joke">
+            </p>
+          </article>
+            
+          <footer class="content-footer">
+            Content Footer
+          </footer>
+        </section>
+
+        <input id="ok" type="submit" value="OK">
+
+        <script>
+            var button = document.getElementById("ok");
+            button.onclick = function joke() {
+
+                var xmlhttp = new XMLHttpRequest();
+                var url = "random.xml";
+
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myArr = JSON.parse(this.responseText);
+                        myFunction(myArr);
+                        console.log(myArr);
+                        console.log(myArr.first);
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+
+                function myFunction(arr) {
+                    document.getElementById("joke").innerHTML = arr.value.joke;;
+                }
+            }
+        </script>
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
